@@ -48,10 +48,9 @@ from metrics import compute_wsc
 # ── Defaults ─────────────────────────────────────────────────────
 
 DEFAULT_SPLIT = (0.50, 0.25, 0.25)
-DEFAULT_ALPHAS = [0.01, 0.05, 0.1]
+DEFAULT_ALPHAS = [0.01, 0.02, 0.05, 0.1]
 
-VOLUME_N_SAMPLES = 500_000
-# volume samples was increased to 1million for blog4d
+VOLUME_N_SAMPLES = 1_000_000
 
 WSC_N_SLABS = 200
 
@@ -62,7 +61,7 @@ MODEL_REGISTRY = {
         GradientBoostingRegressor(
             n_estimators=200, max_depth=4, random_state=0,
         ),
-        n_jobs=1,  # n_jobs=1 inside since you parallelise outside
+        n_jobs=1,
     ),
     'MLP': lambda: MLPRegressor(
         hidden_layer_sizes=(128, 64),
