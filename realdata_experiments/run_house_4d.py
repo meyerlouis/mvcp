@@ -21,7 +21,7 @@ from realdata_experiments.run_experiment import run_single
 # ═══════════════════════════════════════════════════════════
 
 DATASET_NAME = 'house'
-RESULTS_DIR  = f'results_{DATASET_NAME}_4d_v3'
+RESULTS_DIR  = f'results/{DATASET_NAME}_4d_'
 DATA_DIR     = '../data'
 
 def load_dataset():

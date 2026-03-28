@@ -15,8 +15,7 @@ module load PyTorch/2.0-Miniconda3-4.12.0-Python-3.11.3
 source /storage/maths/strdnj/env/bin/activate
 
 # ── Setup ──
-cd /storage/maths/strdnj/kernel_cp/real_experiments
-mkdir -p logs results_bio_2d
+cd /storage/maths/strdnj/mvcp/realdata_experiments
 
 # ── Decode array index into (seed, model) ──
 # 60 jobs = 20 seeds × 3 models

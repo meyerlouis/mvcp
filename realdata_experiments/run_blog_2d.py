@@ -21,7 +21,7 @@ from realdata_experiments.run_experiment import run_single
 # ═══════════════════════════════════════════════════════════
 
 DATASET_NAME = 'blog_data'
-RESULTS_DIR  = f'results_{DATASET_NAME}_2d_v3'
+RESULTS_DIR  = f'results/{DATASET_NAME}_2d_'
 DATA_DIR     = '../data'
 
 def load_dataset():
