@@ -31,7 +31,7 @@ N              = 20_000
 ALPHAS         = [0.1, 0.02, 0.05, 0.01]
 LENGTHSCALES   = [0.1, 0.3, 0.5, 0.8, 1, 2, 5]  # lengthscale parameters to try
 VOLUME_SAMPLES = 100_000
-RESULTS_DIR    = 'results_lengthscale_v3_final'
+RESULTS_DIR    = 'results/lengthscale_sweep/'
 
 def create_scorer_factories():
     """Create scorer factories that loop over lengthscales for Kernel and Density scorers."""

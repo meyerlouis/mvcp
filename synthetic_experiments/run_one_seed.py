@@ -33,7 +33,7 @@ from sklearn.neural_network import MLPRegressor
 N              = 50_000
 ALPHAS         = [0.1, 0.05, 0.02, 0.01]
 VOLUME_SAMPLES = 100_000
-RESULTS_DIR    = 'results_p_v3_L05'
+RESULTS_DIR    = 'results/synthetic_2d/'
 
 SCORER_FACTORIES = {
     'Mahal':      lambda: MahalanobisScorer(),

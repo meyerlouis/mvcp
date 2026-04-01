@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=blog3d
+#SBATCH --job-name=blg4d
 #SBATCH --array=0-99
 #SBATCH --nodes=1
 #SBATCH --ntasks=1

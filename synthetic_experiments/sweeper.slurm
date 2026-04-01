@@ -16,8 +16,8 @@ module load PyTorch/2.0-Miniconda3-4.12.0-Python-3.11.3
 source /storage/maths/strdnj/env/bin/activate
 
 # ── Setup ──
-cd /storage/maths/strdnj/kernel_cp/experiment_sandbox2
-mkdir -p logs results
+cd /storage/maths/strdnj/mvcp/synthetic_experiments/
+#mkdir -p logs results
 
 echo "=============================="
 echo "Seed:  $SLURM_ARRAY_TASK_ID"
