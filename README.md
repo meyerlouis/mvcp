@@ -1,6 +1,6 @@
 # Kernel Conformal Prediction
 
-Reproducibility code for the paper **"[Paper Title]"**.
+Reproducibility code for the paper **"A Kernel Nonconformity Score for Multivariate Conformal Prediction"**.
 
 This repository contains all code to reproduce the synthetic and real-data experiments.
 
@@ -8,14 +8,14 @@ This repository contains all code to reproduce the synthetic and real-data exper
 
 ```
 mvcp/
-├── scorers.py              # Nonconformity scorer classes (KernelScorer, KDEScorer, MahalanobisScorer, DensityScorer, BonferroniScorer)
-├── volume_estimator.py     # Prediction region volume estimation (Monte Carlo & importance sampling)
-├── metrics.py              # Evaluation metrics (coverage, worst-slab coverage)
-├── pipeline.py             # Data split and model fitting pipeline
-├── experiment.py           # Synthetic experiment orchestration (multi-seed runner)
-├── table_viz.py            # Styled notebook tables for result inspection
+├── scorers.py                          # Nonconformity scorer classes (KernelScorer, KDEScorer, MahalanobisScorer, DensityScorer, BonferroniScorer)
+├── volume_estimator.py                 # Prediction region volume estimation (Monte Carlo & importance sampling)
+├── metrics.py                          # Evaluation metrics (coverage, worst-slab coverage)
+├── pipeline.py                         # Data split and model fitting pipeline
+├── experiment.py                       # Synthetic experiment orchestration (multi-seed runner)
+├── table_viz.py                        # Styled notebook tables for result inspection
 │
-├── synthetic_experiments/  # Synthetic data experiments
+├── synthetic_experiments/            # Synthetic data experiments
 │   ├── data_generators.py              # Synthetic DGP
 │   ├── run_one_seed.py                 # SLURM runner: one seed, fixed lengthscale
 │   ├── run_one_seed_lengthscale.py     # SLURM runner: lengthscale ablation
@@ -24,7 +24,7 @@ mvcp/
 │   ├── synthetic_results.ipynb         # Analysis notebook
 │   └── results_*/                      # Saved JSON results per seed
 │
-├── realdata_experiments/   # Real data experiments (Bio, House, Blog datasets)
+├── realdata_experiments/             # Real data experiments (Bio, House, Blog datasets)
 │   ├── run_experiment.py               # Core pipeline: one seed × one model
 │   ├── run_bio.py / run_bio_3d.py / run_bio_4d.py
 │   ├── run_house.py / run_house_3d.py / run_house_4d.py
