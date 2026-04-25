@@ -6,8 +6,8 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=16G
 #SBATCH --time=04:00:00
-#SBATCH --output=logs/house_%A_%a.out
-#SBATCH --error=logs/house_%A_%a.err
+#SBATCH --output=logs/house4d_%A_%a.out
+#SBATCH --error=logs/house4d_%A_%a.err
 #SBATCH --partition=hmem,compute,stats
 
 # ── Environment ──
@@ -18,8 +18,7 @@ source /storage/maths/strdnj/env/bin/activate
 cd /storage/maths/strdnj/mvcp/realdata_experiments
 
 # ── Decode array index into (seed, model) ──
-# 60 jobs = 20 seeds × 3 models
-#MODELS=(Ridge GBR MLP)
+# 100 jobs = 50 seeds × 2 models
 MODELS=(Ridge MLP)
 N_MODELS=${#MODELS[@]}
 

@@ -10,7 +10,7 @@ loop cheaply inside run_single. Parallelise over (seed, model_name).
 Usage (sequential):
     from realdata_experiments.run_experiment import run_single, summarize, print_summary
 
-    r = run_single(X, Y, seed=0, model_name='GBR')
+    r = run_single(X, Y, seed=0, model_name='Ridge')
     # r['Kernel'][0.1]['coverage'] -> float
 
 Usage (parallel):
@@ -18,7 +18,7 @@ Usage (parallel):
     from joblib import Parallel, delayed
     from realdata_experiments.run_experiment import run_single, summarize, print_summary
 
-    jobs = list(product(range(20), ['Ridge', 'GBR', 'MLP']))
+    jobs = list(product(range(50), ['Ridge', 'MLP']))
     all_results = Parallel(n_jobs=-1)(
         delayed(run_single)(X, Y, seed, mn)
         for seed, mn in jobs

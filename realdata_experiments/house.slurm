@@ -18,8 +18,7 @@ source /storage/maths/strdnj/env/bin/activate
 cd /storage/maths/strdnj/mvcp/realdata_experiments
 
 # ── Decode array index into (seed, model) ──
-# 60 jobs = 20 seeds × 3 models
-#MODELS=(Ridge GBR MLP)
+# 100 jobs = 50 seeds × 2 models
 MODELS=(Ridge MLP)
 N_MODELS=${#MODELS[@]}
 

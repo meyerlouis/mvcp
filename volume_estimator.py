@@ -2,9 +2,9 @@
 Volume estimation for prediction regions.
 
 Strategies:
-    mc_volume          - Bounding-box MC, reliable for d ≤ 3
+    mc_volume          - Bounding-box MC, reliable for d ≤ 4
     ellipsoid_volume   - Exact closed-form for Mahalanobis ellipsoids
-    importance_volume  - Uniform sampling from expanded ellipsoid, d ≥ 4
+    importance_volume  - Uniform sampling from expanded ellipsoid, d ≥ 5
     estimate_volume    - Dispatcher
 """
 
@@ -140,7 +140,7 @@ def estimate_volume(scorer, threshold, reference_points,
                     mahal_scorer=None, mahal_threshold=None,
                     n_samples=200_000, seed=0):
     """
-    Dispatch: mc_volume for d ≤ 3, importance_volume for d ≥ 4.
+    Dispatch: mc_volume for d ≤ 4, importance_volume for d ≥ 5.
 
     For MahalanobisScorer at any d, prefer ellipsoid_volume() directly.
 
